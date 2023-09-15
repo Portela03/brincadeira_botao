@@ -1,0 +1,118 @@
+<!DOCTYPE html><html lang="pt-BR"><head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para voce</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <main>
+        <h1>Vai da pra mim hoje, bb?</h1>
+        <div class="options">
+            <button id="yesButton" class="btn btn-primary">Sim </button>
+            <button id="notButton" class="btn btn-primary">Não</button>
+           
+        </div>
+        <div id="msg"></div>
+    </main>
+    <script>
+        const notButton = document.getElementById("notButton");
+        const yesButton = document.getElementById("yesButton");
+        const msg = document.getElementById("msg");
+
+        notButton.addEventListener("mouseover", () => {
+            // const randomX = Math.floor(Math.random() * (window.innerWidth ));
+            const randomX = Math.floor(Math.random() * ((window.innerWidth / 4) - ((window.innerWidth / 4) * -1)) + ((window.innerWidth / 4) * -1));
+            // const randomY = Math.floor(Math.random() * (window.innerHeight));
+            const randomY = Math.floor(Math.random() * ((window.innerHeight / 4) - ((window.innerHeight / 4) * -1)) + ((window.innerHeight / 4) * -1));
+            notButton.style.position = "relative";
+            notButton.style.left = `${randomX}px`;
+            notButton.style.top = `${randomY}px`;
+        });
+
+        notButton.addEventListener("click", function () {
+            console.log("Botão NAO clicado!");
+            // const randomX = Math.floor(Math.random() * (window.innerWidth ));
+            const randomX = Math.floor(Math.random() * ((window.innerWidth / 4) - ((window.innerWidth / 4) * -1)) + ((window.innerWidth / 4) * -1));
+            // const randomY = Math.floor(Math.random() * (window.innerHeight));
+            const randomY = Math.floor(Math.random() * ((window.innerHeight / 4) - ((window.innerHeight / 4) * -1)) + ((window.innerHeight / 4) * -1));
+            notButton.style.position = "relative";
+            notButton.style.left = `${randomX}px`;
+            notButton.style.top = `${randomY}px`;
+        });
+
+        yesButton.addEventListener("click", function () {
+            console.log("Botão SIM clicado!");
+            msg.innerHTML ="Hoje tem safada";
+        });
+        notButton.addEventListener("click", function () {
+            console.log("Botão SIM clicado!");
+            msg.innerHTML ="Pilantra, vai da do mesmo jeito kkkkkkk";
+        });
+
+    </script>
+
+    <style>
+        main {
+            padding-top: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            width: 100vw;
+            height: 100vh;
+            background-color: rgb(252, 177, 255);
+        }
+        h1{
+            margin-bottom: 80px;
+        }
+        #msg{
+          
+            font-size: 50px;
+        }
+
+        .options {
+            display: flex;
+            gap: 32px;
+        }
+
+        .btn-primary {
+            padding-left: 32px;
+            padding-right: 32px;
+            background-color: rgb(69, 0, 134);
+            border-color: rgb(69, 0, 134);
+        }
+
+        .btn-primary:hover {
+            background-color: rgb(38, 2, 71);
+            border-color: rgb(38, 2, 71);
+        }
+
+        .image {
+            margin-top: 52px;
+            margin-bottom: 16px;
+            width: 300px;
+            height: 250px;
+        }
+
+        .donate {
+            position: absolute;
+            bottom: 10px;
+            font-weight: 500;
+        }
+
+        @media screen and (max-width: 600px) {
+            .image {
+                width: 90%;
+                height: auto;
+            }
+
+        }
+    </style>
+
+
+
+
+</body></html>
